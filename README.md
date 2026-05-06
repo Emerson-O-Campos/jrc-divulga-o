@@ -18,9 +18,6 @@ Este projeto tem como objetivo facilitar a divulgação de informações, conte�
 ## 🛠️ Tecnologias utilizadas
 
 - HTML5 / CSS3 / JavaScript
-- (adicione aqui seu framework, se houver: React, Vue, etc.)
-- (backend, se existir: Node.js, PHP, Python, etc.)
-- (banco de dados, se houver: MySQL, MongoDB, etc.)
 
 ## 📍 Visualizar o projeto
 
