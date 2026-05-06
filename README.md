@@ -1,5 +1,7 @@
 # JRC Divulgação
 
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-orange?style=for-the-badge)
+
 Este projeto tem como objetivo facilitar a divulgação de informações, conteúdos e comunicados de forma simples, organizada e acessível.
 
 ## 👀 Preview
