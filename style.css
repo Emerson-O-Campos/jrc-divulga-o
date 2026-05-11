@@ -42,18 +42,19 @@ body {
 
 /* HEADER */
 .header {
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.40); /* mais transparente */
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
   position: sticky;
   top: 0;
   z-index: 999;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .navbar {
   max-width: 1100px;
   margin: auto;
-  padding: 14px 20px;
+  padding: 18px 20px; /* aumentei */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,6 +67,17 @@ body {
   color: #111827;
   text-transform: uppercase;
   letter-spacing: -2px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 90px; /* desktop */
+  width: auto;
+  object-fit: contain;
 }
 
 .logo span {
@@ -789,4 +801,20 @@ footer {
 .flatpickr-day:hover {
   background: rgba(37, 99, 235, 0.15) !important;
   border-color: rgba(37, 99, 235, 0.15) !important;
+}
+
+@media (max-width: 900px) {
+  .logo-img {
+    height: 65px; /* tamanho bom no mobile */
+  }
+
+  .navbar {
+    padding: 12px 15px; /* reduz a altura da barra no celular */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-img {
+    height: 60px; /* celular pequeno */
+  }
 }
