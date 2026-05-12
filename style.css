@@ -1,3 +1,6 @@
+/* ==========================================================
+   RESET / BASE
+========================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -15,14 +18,18 @@ body {
   line-height: 1.6;
 }
 
-/* CONTAINER */
+/* ==========================================================
+   CONTAINER
+========================================================== */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* SKIP LINK (acessibilidade) */
+/* ==========================================================
+   SKIP LINK (ACESSIBILIDADE)
+========================================================== */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -35,14 +42,17 @@ body {
   font-weight: bold;
   border-radius: 8px;
 }
+
 .skip-link:focus {
   top: 10px;
   left: 10px;
 }
 
-/* HEADER */
+/* ==========================================================
+   HEADER / NAVBAR
+========================================================== */
 .header {
-  background: rgba(255, 255, 255, 0.40); /* mais transparente */
+  background: rgba(255, 255, 255, 0.40);
   border-bottom: 1px solid rgba(229, 231, 235, 0.6);
   position: sticky;
   top: 0;
@@ -54,14 +64,18 @@ body {
 .navbar {
   max-width: 1100px;
   margin: auto;
-  padding: 18px 20px; /* aumentei */
+  padding: 18px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* LOGO */
+/* ==========================================================
+   LOGO
+========================================================== */
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 2.3rem;
   font-weight: 900;
   color: #111827;
@@ -69,13 +83,8 @@ body {
   letter-spacing: -2px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
 .logo-img {
-  height: 90px; /* desktop */
+  height: 90px;
   width: auto;
   object-fit: contain;
 }
@@ -89,7 +98,9 @@ body {
   color: #2563eb;
 }
 
-/* MENU */
+/* ==========================================================
+   MENU DESKTOP
+========================================================== */
 .menu {
   list-style: none;
   display: flex;
@@ -114,7 +125,9 @@ body {
   border-bottom: 2px solid #2563eb;
 }
 
-/* BOTÃO MENU */
+/* ==========================================================
+   BOTÃO WHATSAPP (NAVBAR)
+========================================================== */
 .btn-menu {
   text-decoration: none;
   background: #25d366;
@@ -134,7 +147,9 @@ body {
   transform: translateY(-2px);
 }
 
-/* MOBILE MENU BTN */
+/* ==========================================================
+   MENU MOBILE
+========================================================== */
 .menu-mobile {
   display: none;
   border: none;
@@ -144,7 +159,6 @@ body {
   cursor: pointer;
 }
 
-/* MENU MOBILE */
 .menu-mobile-box {
   display: none;
   flex-direction: column;
@@ -183,13 +197,12 @@ body {
   color: white !important;
 }
 
-/* HERO */
+/* ==========================================================
+   HERO
+========================================================== */
 .hero {
   height: 92vh;
-  background: linear-gradient(
-      rgba(15, 23, 42, 0.65),
-      rgba(15, 23, 42, 0.75)
-    ),
+  background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.75)),
     url("fundo-jrc.jpeg");
   background-size: cover;
   background-position: center;
@@ -242,7 +255,9 @@ body {
   flex-wrap: wrap;
 }
 
-/* BUTTONS */
+/* ==========================================================
+   BOTÕES
+========================================================== */
 .btn-whatsapp {
   text-decoration: none;
   background: #25d366;
@@ -280,7 +295,9 @@ body {
   transform: translateY(-3px);
 }
 
-/* SECTIONS */
+/* ==========================================================
+   SECTIONS PADRÃO
+========================================================== */
 section {
   padding: 80px 0;
 }
@@ -299,7 +316,9 @@ section h2 {
   text-align: center;
 }
 
-/* SERVIÇOS */
+/* ==========================================================
+   SERVIÇOS
+========================================================== */
 .servicos {
   background: white;
 }
@@ -349,7 +368,9 @@ section h2 {
   color: #2563eb;
 }
 
-/* PREÇOS */
+/* ==========================================================
+   PREÇOS
+========================================================== */
 .precos {
   background: #f8fafc;
 }
@@ -414,7 +435,9 @@ section h2 {
   text-align: center;
 }
 
-/* GALERIA */
+/* ==========================================================
+   GALERIA
+========================================================== */
 .galeria {
   background: white;
 }
@@ -439,7 +462,92 @@ section h2 {
   transform: scale(1.05);
 }
 
-/* MODAL GALERIA */
+/* ==========================================================
+   VÍDEO (GALERIA)
+========================================================== */
+.video-container {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.titulo-video {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.video-box {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.video-box video {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* BOTÃO PLAY (GLASS + PULSE AZUL) */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: none;
+
+  background: linear-gradient(135deg, #0066ff, #4fd1ff);
+  color: white;
+  font-size: 30px;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  box-shadow: 0 8px 20px rgba(0, 102, 255, 0.35);
+  animation: pulseBlue 1.5s infinite;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.12);
+  box-shadow: 0 10px 25px rgba(79, 209, 255, 0.45);
+}
+
+/* Efeito brilho glass */
+.play-btn::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 55%;
+  height: 35%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  filter: blur(2px);
+  transform: rotate(-20deg);
+}
+
+/* Pulse azul */
+@keyframes pulseBlue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(79, 209, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 102, 255, 0);
+  }
+}
+
+/* ==========================================================
+   MODAL GALERIA
+========================================================== */
 .modal {
   display: none;
   position: fixed;
@@ -482,12 +590,9 @@ section h2 {
   color: #f59e0b;
 }
 
-/* FORMULÁRIO */
-.formulario {
-  background: #f8fafc;
-}
-
-/* FORMULÁRIO PREMIUM */
+/* ==========================================================
+   FORMULÁRIO
+========================================================== */
 .formulario {
   background: #f8fafc;
 }
@@ -547,7 +652,7 @@ section h2 {
   line-height: 1.5;
 }
 
-/* BOTÃO PREMIUM */
+/* BOTÃO FORMULÁRIO */
 .btn-form {
   width: 100%;
   background: linear-gradient(90deg, #25d366, #1ebe5d);
@@ -575,7 +680,9 @@ section h2 {
   transform: translateY(0px);
 }
 
-/* LOCALIZAÇÃO */
+/* ==========================================================
+   LOCALIZAÇÃO
+========================================================== */
 .localizacao {
   background: white;
 }
@@ -589,7 +696,9 @@ section h2 {
   box-shadow: 0px 10px 25px rgba(17, 24, 39, 0.12);
 }
 
-/* FOOTER */
+/* ==========================================================
+   FOOTER
+========================================================== */
 footer {
   background: #111827;
   color: white;
@@ -625,7 +734,9 @@ footer {
   transform: translateY(-3px);
 }
 
-/* WHATSAPP FIXO */
+/* ==========================================================
+   WHATSAPP FIXO
+========================================================== */
 .whatsapp-fixo {
   position: fixed;
   bottom: 25px;
@@ -649,7 +760,7 @@ footer {
   transform: scale(1.12);
 }
 
-/* PULSE ANIMATION */
+/* PULSE WHATSAPP */
 .pulse {
   animation: pulse 1.5s infinite;
 }
@@ -666,7 +777,9 @@ footer {
   }
 }
 
-/* TOAST NOTIFICATION */
+/* ==========================================================
+   TOAST NOTIFICATION
+========================================================== */
 #toastContainer {
   position: fixed;
   bottom: 100px;
@@ -694,7 +807,9 @@ footer {
   100% { opacity: 0; transform: translateY(-20px); }
 }
 
-/* ANIMAÇÃO SCROLL */
+/* ==========================================================
+   ANIMAÇÃO SCROLL
+========================================================== */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -706,7 +821,36 @@ footer {
   transform: translateY(0);
 }
 
-/* RESPONSIVO */
+/* ==========================================================
+   FLATPICKR (CALENDÁRIO)
+========================================================== */
+.flatpickr-calendar {
+  border-radius: 12px !important;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15) !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  color: white !important;
+  font-weight: 700;
+}
+
+.flatpickr-day.today {
+  border-color: #25d366 !important;
+}
+
+.flatpickr-day:hover {
+  background: rgba(37, 99, 235, 0.15) !important;
+  border-color: rgba(37, 99, 235, 0.15) !important;
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
 @media (max-width: 900px) {
   .menu {
     display: none;
@@ -722,6 +866,14 @@ footer {
 
   .logo {
     font-size: 2rem;
+  }
+
+  .logo-img {
+    height: 65px;
+  }
+
+  .navbar {
+    padding: 12px 15px;
   }
 
   .logo span {
@@ -763,58 +915,22 @@ footer {
   section {
     padding: 50px 0;
   }
-  
+
   section h2 {
     font-size: 1.8rem;
   }
-  
+
   .hero h1 {
     font-size: 1.8rem;
   }
-  
-  .btn-whatsapp, .btn-outline {
+
+  .btn-whatsapp,
+  .btn-outline {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-}
 
-/* ==================== FLATPICKR (CALENDÁRIO) ==================== */
-.flatpickr-calendar {
-  border-radius: 12px !important;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15) !important;
-  font-family: 'Montserrat', sans-serif !important;
-}
-
-.flatpickr-day.selected,
-.flatpickr-day.startRange,
-.flatpickr-day.endRange {
-  background: #2563eb !important;
-  border-color: #2563eb !important;
-  color: white !important;
-  font-weight: 700;
-}
-
-.flatpickr-day.today {
-  border-color: #25d366 !important;
-}
-
-.flatpickr-day:hover {
-  background: rgba(37, 99, 235, 0.15) !important;
-  border-color: rgba(37, 99, 235, 0.15) !important;
-}
-
-@media (max-width: 900px) {
   .logo-img {
-    height: 65px; /* tamanho bom no mobile */
-  }
-
-  .navbar {
-    padding: 12px 15px; /* reduz a altura da barra no celular */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-img {
-    height: 60px; /* celular pequeno */
+    height: 60px;
   }
 }
