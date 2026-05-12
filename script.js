@@ -392,3 +392,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+const video = document.getElementById("videoJRC");
+const playBtn = document.getElementById("playBtn");
+
+if (video && playBtn) {
+  playBtn.addEventListener("click", () => {
+    video.setAttribute("controls", "controls");
+    video.play();
+    playBtn.style.display = "none";
+  });
+
+  video.addEventListener("pause", () => {
+    playBtn.style.display = "block";
+  });
+
+  video.addEventListener("play", () => {
+    playBtn.style.display = "none";
+  });
+}
