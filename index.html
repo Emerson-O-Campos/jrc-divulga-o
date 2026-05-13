@@ -28,41 +28,52 @@
 
 <body>
 
-  <!-- SKIP TO CONTENT (acessibilidade) -->
-  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-
   <!-- HEADER -->
   <header class="header">
     <nav class="navbar">
-      <div class="logo">
-        <img src="img/logo-divulgacao.png" alt="JRC Divulgação" class="logo-img">
-      </div>
+  <div class="logo">
+    <img src="img/logo-divulgacao.png" alt="JRC Divulgação" class="logo-img">
+  </div>
 
-      <ul class="menu">
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#precos">Preços</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#localizacao">Localização</a></li>
-        <li><a href="#formulario">Contato</a></li>
-      </ul>
+  <ul class="menu">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#localizacao">Localização</a></li>
+    <li><a href="#formulario">Contato</a></li>
+  </ul>
 
-      <a href="https://wa.me/5519988587512" class="btn-menu" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i> Orçamento
-      </a>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <a href="https://wa.me/5519988587512" class="btn-menu" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Orçamento
+    </a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </div>
 
-      <button class="menu-mobile" id="menuMobileBtn" aria-label="Menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </nav>
+  <button class="menu-mobile" id="menuMobileBtn" aria-label="Menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</nav>
 
-    <!-- MENU MOBILE -->
+    
+
+    <!-- OVERLAY DO MENU MOBILE -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    
+    <!-- MENU MOBILE PREMIUM -->
     <div class="menu-mobile-box" id="menuMobileBox">
+      <div class="menu-close" id="menuClose">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    
       <a href="#servicos">Serviços</a>
       <a href="#precos">Preços</a>
       <a href="#galeria">Galeria</a>
       <a href="#localizacao">Localização</a>
       <a href="#formulario">Contato</a>
-
+    
       <a href="https://wa.me/5519988587512" target="_blank" class="mobile-wpp">
         <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
       </a>
@@ -82,8 +93,7 @@
             <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
           </a>
 
-          <a href="#servicos" class="btn-outline">
-            Ver Serviços
+          
           </a>
         </div>
       </div>
