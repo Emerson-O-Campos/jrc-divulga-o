@@ -1263,3 +1263,147 @@ footer {
     font-size: 2rem;
   }
 }
+
+/* ==========================================================
+   INVESTIMENTO -> CARDS PREMIUM NO MOBILE
+========================================================== */
+@media (max-width: 768px) {
+
+  .tabela-container {
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .tabela-precos {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 18px;
+    background: transparent;
+  }
+
+  .tabela-precos thead {
+    display: none;
+  }
+
+  .tabela-precos tbody tr {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+
+    background: var(--color-bg);
+    border: 1px solid var(--gray);
+
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Linha de destaque superior (igual seus cards) */
+  .tabela-precos tbody tr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+    background: var(--gradient-primary);
+  }
+
+  .tabela-precos tbody tr:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Remove estilo de tabela */
+  .tabela-precos tbody tr td {
+    border: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  /* Serviço (título do card) */
+  .tabela-precos tbody tr td:nth-child(1) {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
+
+  /* Badge alinhada melhor */
+  .tabela-precos tbody tr td:nth-child(1) .badge {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  /* Linha com duração + valor */
+  .tabela-precos tbody tr td:nth-child(2),
+  .tabela-precos tbody tr td:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-md);
+
+    background: var(--gray-light);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  /* Label duração */
+  .tabela-precos tbody tr td:nth-child(2)::before {
+    content: "⏱ Duração";
+    font-weight: 900;
+    color: var(--color-muted);
+  }
+
+  /* Label valor */
+  .tabela-precos tbody tr td:nth-child(3)::before {
+    content: "💰 Valor";
+    font-weight: 900;
+    color: var(--color-muted);
+  }
+
+  /* Valor mais destacado */
+  .tabela-precos tbody tr td:nth-child(3) {
+    background: rgba(0, 102, 255, 0.08);
+    border: 1px solid rgba(0, 102, 255, 0.15);
+  }
+
+  .tabela-precos tbody tr td:nth-child(3) {
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: var(--primary);
+  }
+
+  /* Card destaque (Mais vendido) */
+  .tabela-precos tr.destaque {
+    border: 2px solid rgba(0, 212, 170, 0.35);
+    background: linear-gradient(
+      135deg,
+      rgba(0, 102, 255, 0.06),
+      rgba(0, 212, 170, 0.06)
+    );
+  }
+
+  .tabela-precos tr.destaque::before {
+    background: var(--gradient-secondary);
+  }
+
+  /* Badge mais elegante no mobile */
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    font-weight: 900;
+    animation: none;
+  }
+}
